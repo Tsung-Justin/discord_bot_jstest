@@ -30,7 +30,7 @@ export const loadCommands = async () => {
             const cmd = await import(file)
             commands.push(cmd.command)
         }
-    
+
         await updateSlashCommands(commands)
     } catch (error) {
         console.log(error)
